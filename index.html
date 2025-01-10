@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocean Adventure</title>
+    <title>Ocean Odyssey</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/png" href="images/finn.png">
+    <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Righteous&family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
         body {
@@ -293,7 +293,7 @@
         }
 
         .nav-button {
-            background: rgba(255, 255, 255, 0.35);
+            background: rgba(255, 255, 255, 0.2);
             border: none;
             border-radius: 12px;
             padding: 12px 20px;
@@ -350,6 +350,11 @@
             min-width: 80px;
         }
 
+        .nav-button.docs:hover {
+            background: rgba(255, 255, 255, 0.45);
+            transform: translateY(-2px);
+        }
+
         .nav-button.docs img {
             width: 32px;
             height: 32px;
@@ -357,7 +362,7 @@
         }
 
         .nav-button.active {
-            background: rgba(255, 255, 255, 0.35);
+            background: rgba(255, 255, 255, 0.2);
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
         }
 
@@ -376,30 +381,49 @@
         }
 
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             animation: fadeIn 0.5s ease-out;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .section h2 {
-            font-size: 2em;
-            margin: 45px 0 20px;
+            font-size: 1.8em;
+            margin: 25px 0 15px;
             color: #fff;
         }
 
         .section h3 {
-            font-size: 1.4em;
-            margin: 45px 0 15px;
+            font-size: 1.3em;
+            margin: 25px 0 10px;
             color: #fff;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .section p {
+        .section h4 {
             font-size: 1.1em;
-            line-height: 1.6;
+            margin: 20px 0 10px;
+            color: #fff;
+        }
+
+        .section p {
+            font-size: 1em;
+            line-height: 1.5;
             color: rgba(255, 255, 255, 0.9);
-            margin: 0;
+            margin: 10px 0;
+        }
+
+        .section ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .section li {
+            margin: 5px 0;
         }
 
         @keyframes fadeIn {
@@ -500,21 +524,6 @@
             padding: 20px;
             padding-right: 24px;
             margin-right: -4px;
-        }
-
-        .section {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .section:hover {
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .chat-content {
@@ -723,6 +732,7 @@
             height: calc(70vh - 80px);
             gap: 20px;
             position: relative;
+            animation: slideInChat 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .chat-messages {
@@ -1331,6 +1341,53 @@
         .send-button:hover {
             background: rgba(0, 150, 255, 0.4);
         }
+
+        @keyframes slideInChat {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(0.98);
+            }
+            70% {
+                opacity: 1;
+                transform: translateY(-5px) scale(1.01);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Special styling for introduction and conclusion sections */
+        .section:first-of-type,
+        .section:last-of-type {
+            padding: 15px;
+        }
+
+        .section:first-of-type h3,
+        .section:last-of-type h3 {
+            margin: 0 0 10px;
+        }
+
+        .section:first-of-type p,
+        .section:last-of-type p {
+            margin: 8px 0;
+        }
+
+        .section:last-of-type ul {
+            margin: 8px 0;
+        }
+
+        .section:last-of-type li {
+            margin: 4px 0;
+        }
+
+        /* Adjust spacing for the title */
+        h2 {
+            margin: 20px 0 25px;
+            font-size: 2em;
+            color: #fff;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -1608,7 +1665,7 @@
             // Focus the input after chat is opened
             setTimeout(() => {
                 document.getElementById('user-input').focus();
-            }, 100);
+            }, 800);
         }
 
         let messages = [];
@@ -1708,8 +1765,7 @@
 </div>
 
 <div class="section">
-  <h4>🔹 2. System Overview</h4>
-  <h4>🔹 2.1 Core Components</h4>
+  <h4>⚙️ 2. System Overview</h4>
   <p><strong>Chapter Modules</strong></p>
   <ul>
     <li>Each chapter unlocks sequentially.</li>
@@ -1762,9 +1818,6 @@
     <li><strong>Tone Shifts:</strong> Adapts tone based on user engagement (e.g., playful, informative, or reflective).</li>
     <li><strong>Theme Integration:</strong> References recurring themes (e.g., curiosity about marine life or conservation).</li>
   </ul>
-</div>
-
-<div class="section">
   <h4>🔹 3.3 Chapter Completion</h4>
   <ul>
     <li><strong>User Inputs Stored:</strong> All meaningful interactions (questions, themes, key phrases) are saved to a database.</li>
@@ -1827,7 +1880,6 @@
 </div>
 <div class="section">
   <h3>📐 6. Architecture Design</h3>
-  <h4>🔹 6.1 System Workflow</h4>
   <p><strong>Frontend (User Interaction):</strong></p>
   <ul>
     <li>Web interface with chapter-based progression.</li>
