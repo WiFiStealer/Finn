@@ -1129,34 +1129,33 @@
         .typing-indicator {
             display: inline-flex;
             align-items: center;
-            gap: 3px;
-            padding: 6px 10px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            color: white;
-            font-size: 13px;
-            margin-bottom: 8px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            align-self: flex-start;
-            margin-right: 20%;
+            gap: 5px;
+            padding: 10px 15px;
+            background: rgba(0, 150, 255, 0.15);
+            border-radius: 15px;
         }
 
         .typing-indicator span {
-            width: 4px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.6);
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.7);
             border-radius: 50%;
-            animation: typing 1.4s infinite;
-            display: inline-block;
+            animation: typingBounce 1.4s infinite ease-in-out;
         }
 
+        .typing-indicator span:nth-child(1) { animation-delay: 0s; }
         .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
         .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
 
-        @keyframes typing {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-3px); }
+        @keyframes typingBounce {
+            0%, 60%, 100% {
+                transform: translateY(0);
+                opacity: 0.6;
+            }
+            30% {
+                transform: translateY(-4px);
+                opacity: 1;
+            }
         }
 
         .typing-indicator.visible {
@@ -1650,12 +1649,17 @@
         function showTypingIndicator() {
             const messagesContainer = document.getElementById('chatMessages');
             const typingDiv = document.createElement('div');
-            typingDiv.className = 'message assistant-message typing-indicator';
-            typingDiv.innerHTML = `
+            typingDiv.className = 'message assistant-message';
+            
+            const indicatorDiv = document.createElement('div');
+            indicatorDiv.className = 'typing-indicator';
+            indicatorDiv.innerHTML = `
                 <span></span>
                 <span></span>
                 <span></span>
             `;
+            
+            typingDiv.appendChild(indicatorDiv);
             messagesContainer.appendChild(typingDiv);
             messagesContainer.scrollTop = messagesContainer.scrollHeight;
             return typingDiv;
