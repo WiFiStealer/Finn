@@ -1388,6 +1388,59 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
+
+        .message {
+            padding: 10px 15px;
+            border-radius: 15px;
+            max-width: 80%;
+            margin: 5px 0;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background: rgba(255, 255, 255, 0.1);
+            align-self: flex-end;
+            margin-left: 20%;
+        }
+
+        .assistant-message {
+            background: rgba(0, 150, 255, 0.15);
+            align-self: flex-start;
+            margin-right: 20%;
+        }
+
+        .chat-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .chat-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .chat-input:focus {
+            outline: none;
+        }
+
+        .send-button {
+            background: rgba(0, 150, 255, 0.3);
+            border: none;
+            border-radius: 10px;
+            padding: 8px 15px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .send-button:hover {
+            background: rgba(0, 150, 255, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -1445,6 +1498,13 @@
 
         <div class="content">
             <div class="content-inner">
+                <div class="chat-container">
+                    <div id="chat-messages" class="chat-messages"></div>
+                    <div class="chat-input-container">
+                        <input type="text" id="message-input" placeholder="Chat with Finn..." class="chat-input">
+                        <button onclick="sendMessage()" class="send-button">Send</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

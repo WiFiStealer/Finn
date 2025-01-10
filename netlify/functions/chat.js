@@ -7,7 +7,7 @@ exports.handler = async function(event, context) {
   try {
     const { message } = JSON.parse(event.body);
     
-    const response = await fetch('https://api.proxyapi.ai/openai/v1/chat/completions', {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
@@ -33,6 +33,10 @@ exports.handler = async function(event, context) {
         max_tokens: 500
       })
     });
+
+    if (!response.ok) {
+      throw new Error(`OpenAI API responded with status: ${response.status}`);
+    }
 
     const data = await response.json();
     
