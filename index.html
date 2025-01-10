@@ -293,15 +293,28 @@
         }
 
         .nav-button {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.35);
             border: none;
             border-radius: 12px;
             padding: 12px 20px;
-            color: #ffffff;
+            color: black;
             font-size: 16px;
             cursor: pointer;
             transition: all 0.3s ease;
-            min-width: 80px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.45);
+            transform: translateY(-2px);
+        }
+
+        .nav-button i {
+            color: black;
+            font-size: 18px;
         }
 
         .nav-button.pump-fun {
@@ -341,11 +354,6 @@
             width: 32px;
             height: 32px;
             filter: brightness(0) invert(1);
-        }
-
-        .nav-button:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
         }
 
         .nav-button.active {
