@@ -1641,34 +1641,6 @@
             }
         });
 
-        async function toggleChat() {
-            clearActiveButtons();
-            const content = document.querySelector('.content-inner');
-            
-            // Add active class to the Talk to Reefy button if it exists
-            const chatButton = document.querySelector('.talk-to-finn-button');
-            if (chatButton) {
-                chatButton.classList.add('active');
-            }
-            
-            content.innerHTML = `
-                <div class="chat-container">
-                    <div class="chat-messages" id="chatMessages">
-                        <div class="message assistant-message">Hi! I'm Reefy, your ocean guide! How can I help you today? 🌊</div>
-                    </div>
-                    <div class="chat-input-container">
-                        <input type="text" id="user-input" class="chat-input" placeholder="Type your message..." onkeypress="if(event.key === 'Enter') sendMessage()">
-                        <button class="send-button" onclick="sendMessage()">➤</button>
-                    </div>
-                </div>
-            `;
-
-            // Focus the input after chat is opened
-            setTimeout(() => {
-                document.getElementById('user-input').focus();
-            }, 800);
-        }
-
         let messages = [];
         
         async function sendMessage() {
@@ -1692,7 +1664,10 @@
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ message })
+                    body: JSON.stringify({ 
+                        message,
+                        conversationHistory: messages 
+                    })
                 });
                 
                 const data = await response.json();
@@ -1700,8 +1675,9 @@
                 // Remove typing indicator
                 removeTypingIndicator(indicator);
                 
-                // Add AI response to chat
+                // Add AI response to chat and update conversation history
                 addMessage('assistant', data.message);
+                messages = data.conversationHistory;
                 
             } catch (error) {
                 console.error('Error:', error);
