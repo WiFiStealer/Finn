@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ocean Odyssey</title>
+    <title>Reefy's Ocean Odyssey</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -1393,26 +1393,27 @@
 <body>
     <div class="header">
         <h1>
-            <span style="--delay: 0">F</span>
-            <span style="--delay: 1">i</span>
-            <span style="--delay: 2">n</span>
-            <span style="--delay: 3">n</span>
-            <span style="--delay: 4">'</span>
-            <span style="--delay: 5">s</span>
-            <span style="--delay: 6"> </span>
-            <span style="--delay: 7">O</span>
-            <span style="--delay: 8">c</span>
-            <span style="--delay: 9">e</span>
-            <span style="--delay: 10">a</span>
-            <span style="--delay: 11">n</span>
-            <span style="--delay: 12"> </span>
-            <span style="--delay: 13">O</span>
-            <span style="--delay: 14">d</span>
-            <span style="--delay: 15">y</span>
-            <span style="--delay: 16">s</span>
+            <span style="--delay: 0">R</span>
+            <span style="--delay: 1">e</span>
+            <span style="--delay: 2">e</span>
+            <span style="--delay: 3">f</span>
+            <span style="--delay: 4">y</span>
+            <span style="--delay: 5">'</span>
+            <span style="--delay: 6">s</span>
+            <span style="--delay: 7"> </span>
+            <span style="--delay: 8">O</span>
+            <span style="--delay: 9">c</span>
+            <span style="--delay: 10">e</span>
+            <span style="--delay: 11">a</span>
+            <span style="--delay: 12">n</span>
+            <span style="--delay: 13"> </span>
+            <span style="--delay: 14">O</span>
+            <span style="--delay: 15">d</span>
+            <span style="--delay: 16">y</span>
             <span style="--delay: 17">s</span>
-            <span style="--delay: 18">e</span>
-            <span style="--delay: 19">y</span>
+            <span style="--delay: 18">s</span>
+            <span style="--delay: 19">e</span>
+            <span style="--delay: 20">y</span>
         </h1>
     </div>
     <div id="loading-screen">
@@ -1433,12 +1434,12 @@
                 <button class="chapter-button active" id="chapter1"><span class="chapter-text">Chapter 1: The Coral Kingdom</span></button>
                 <button class="chapter-button locked" id="chapter2"><span class="chapter-text">Chapter 2: The Great Pacific Quest</span></button>
                 <button class="chapter-button locked" id="chapter3"><span class="chapter-text">Chapter 3: Legends of the Deep Blue</span></button>
-                <button class="chapter-button locked" id="chapter4"><span class="chapter-text">Chapter 4: Finn Among the Icebergs</span></button>
+                <button class="chapter-button locked" id="chapter4"><span class="chapter-text">Chapter 4: Reefy Among the Icebergs</span></button>
                 <button class="chapter-button locked" id="chapter5"><span class="chapter-text">Chapter 5: The Frozen North</span></button>
                 <div class="bottom-nav">
-                    <a href="https://pump.fun/coin/9Jc7hw4GWSWG2zab57F6dhRDPfFRat5y74JJ6BZvpump" target="_blank"><button class="nav-button pump-fun"><img src="images/Pump_fun_logo.png" alt="Pump.fun"></button></a>
+                    <a href="" target="_blank"><button class="nav-button pump-fun"><img src="images/Pump_fun_logo.png" alt="Pump.fun"></button></a>
                     <button class="nav-button docs" onclick="toggleDocs()"><img src="images/docs.png" alt="Guide"></button>
-                    <button class="nav-button twitter" onclick="window.open('https://x.com/deepseafinn', '_blank')"><img src="images/xlogo.png" alt="X Logo"></button>
+                    <button class="nav-button twitter" onclick="window.open('https://x.com/deepseareefy', '_blank')"><img src="images/xlogo.png" alt="X Logo"></button>
                 </div>
             </div>
         </div>
@@ -1448,7 +1449,7 @@
                 <div class="chat-container">
                     <div id="chat-messages" class="chat-messages"></div>
                     <div class="chat-input-container">
-                        <input type="text" id="message-input" placeholder="Chat with Finn..." class="chat-input">
+                        <input type="text" id="message-input" placeholder="Chat with Reefy..." class="chat-input">
                         <button onclick="sendMessage()" class="send-button">Send</button>
                     </div>
                 </div>
@@ -1583,37 +1584,37 @@
             if (chapterNumber === 1) {
                 contentInner.innerHTML = `
                     <img src="images/chapter1.jpg" alt="Vibrant coral reef with tropical fish" class="chapter-image">
-                    <button class="talk-to-finn-button" onclick="toggleChat()">Talk to Finn</button>
+                    <button class="talk-to-finn-button" onclick="toggleChat()">Talk to Reefy</button>
                     <h2>Chapter 1: The Coral Kingdom</h2>
-                    <p>Finn explores the vibrant reefs of the Indian Ocean, swimming among colorful corals and playful reef fish, discovering the magic of his home waters.</p>
+                    <p>Reefy explores the vibrant reefs of the Indian Ocean, swimming among colorful corals and playful reef fish, discovering the magic of his home waters.</p>
                 `;
             } else if (chapterNumber === 2) {
                 content.classList.add('locked');
                 contentInner.innerHTML = `
                     <img src="images/chapter2.jpg" alt="Deep ocean abyss with bioluminescent creatures" class="chapter-image">
                     <h2>Chapter 2: The Great Pacific Quest</h2>
-                    <p>Finn ventures into the Pacific Ocean, encountering majestic sea turtles, mysterious volcanic ridges, and the boundless beauty of the world's largest ocean.</p>
+                    <p>Reefy ventures into the Pacific Ocean, encountering majestic sea turtles, mysterious volcanic ridges, and the boundless beauty of the world's largest ocean.</p>
                 `;
             } else if (chapterNumber === 3) {
                 content.classList.add('locked');
                 contentInner.innerHTML = `
                     <img src="images/chapter3.jpg" alt="Ice shelf with polar marine life" class="chapter-image">
                     <h2>Chapter 3: Legends of the Deep Blue</h2>
-                    <p>Finn explores the Atlantic's ancient coral-covered ruins, joined by playful dolphins in a journey through its mysterious depths.</p>
+                    <p>Reefy explores the Atlantic's ancient coral-covered ruins, joined by playful dolphins in a journey through its mysterious depths.</p>
                 `;
             } else if (chapterNumber === 4) {
                 content.classList.add('locked');
                 contentInner.innerHTML = `
                     <img src="images/chapter4.jpg" alt="Kelp forest with diverse marine life" class="chapter-image">
-                    <h2>Chapter 4: Finn Among the Icebergs</h2>
-                    <p>The icy Southern Ocean tests Finn's resilience as he braves freezing waters, dodges massive icebergs, and seeks warmth in the company of curious emperor penguins.</p>
+                    <h2>Chapter 4: Reefy Among the Icebergs</h2>
+                    <p>The icy Southern Ocean tests Reefy's resilience as he braves freezing waters, dodges massive icebergs, and seeks warmth in the company of curious emperor penguins.</p>
                 `;
             } else if (chapterNumber === 5) {
                 content.classList.add('locked');
                 contentInner.innerHTML = `
                     <img src="images/chapter5.jpg" alt="Underwater volcanic vents" class="chapter-image">
                     <h2>Chapter 5: The Frozen North</h2>
-                    <p>In the unforgiving Arctic Ocean, Finn faces the coldest challenge of his journey, battling frigid waters and harsh conditions while finding unlikely friends among seals beneath the auroras.</p>
+                    <p>In the unforgiving Arctic Ocean, Reefy faces the coldest challenge of his journey, battling frigid waters and harsh conditions while finding unlikely friends among seals beneath the auroras.</p>
                 `;
             }
 
@@ -1644,7 +1645,7 @@
             clearActiveButtons();
             const content = document.querySelector('.content-inner');
             
-            // Add active class to the Talk to Finn button if it exists
+            // Add active class to the Talk to Reefy button if it exists
             const chatButton = document.querySelector('.talk-to-finn-button');
             if (chatButton) {
                 chatButton.classList.add('active');
@@ -1653,7 +1654,7 @@
             content.innerHTML = `
                 <div class="chat-container">
                     <div class="chat-messages" id="chatMessages">
-                        <div class="message assistant-message">Hi! I'm Finn, your ocean guide! How can I help you today? 🌊</div>
+                        <div class="message assistant-message">Hi! I'm Reefy, your ocean guide! How can I help you today? 🌊</div>
                     </div>
                     <div class="chat-input-container">
                         <input type="text" id="user-input" class="chat-input" placeholder="Type your message..." onkeypress="if(event.key === 'Enter') sendMessage()">
@@ -1756,12 +1757,12 @@
             
             const contentInner = document.querySelector('.content-inner');
             contentInner.innerHTML = `
-               <h2>Finn’s Ocean Odyssey — An Interactive, Evolving AI Narrative</h2>
+               <h2>Reefy’s Ocean Odyssey — An Interactive, Evolving AI Narrative</h2>
 
 <div class="section">
   <h3>🌊 1. Introduction</h3>
-  <p>Finn’s Ocean Odyssey is an AI-driven, chapter-based interactive story where users engage with Finn, a curious and adventurous reef shark, across multiple ocean-themed chapters. Each chapter dynamically evolves based on user interactions and collective inputs. Upon chapter completion, the system generates unique insights and shapes the flow of future chapters, making every experience personalized and immersive.</p>
-  <p>This whitepaper outlines the system architecture, AI behavior, data flow, and mechanics for implementing the evolving interactive Finn’s Ocean Odyssey experience.</p>
+  <p>Reefy’s Ocean Odyssey is an AI-driven, chapter-based interactive story where users engage with Reefy, a curious and adventurous reef shark, across multiple ocean-themed chapters. Each chapter dynamically evolves based on user interactions and collective inputs. Upon chapter completion, the system generates unique insights and shapes the flow of future chapters, making every experience personalized and immersive.</p>
+  <p>This whitepaper outlines the system architecture, AI behavior, data flow, and mechanics for implementing the evolving interactive Reefy’s Ocean Odyssey experience.</p>
 </div>
 
 <div class="section">
@@ -1771,7 +1772,7 @@
     <li>Each chapter unlocks sequentially.</li>
     <li>Every chapter contains:
       <ul>
-        <li>Interactive AI responses (Finn’s dialogue).</li>
+        <li>Interactive AI responses (Reefy’s dialogue).</li>
         <li>Input collection for learning.</li>
         <li>Contextual dependencies on prior chapters.</li>
       </ul>
@@ -1779,7 +1780,7 @@
   </ul>
   <p><strong>AI Learning Engine</strong></p>
   <ul>
-    <li>Purpose: Adapt Finn’s responses and narrative based on user interactions.</li>
+    <li>Purpose: Adapt Reefy’s responses and narrative based on user interactions.</li>
     <li>Mechanism: Fine-tuned GPT-4 model with context-specific memories and learning pathways.</li>
   </ul>
   <p><strong>Cumulative Data Engine</strong></p>
@@ -1790,7 +1791,7 @@
   <p><strong>Epilogue Generator</strong></p>
   <ul>
     <li>Uses aggregated inputs and narrative logic to create a personalized final story or insights.</li>
-    <li>Reflects user interactions, decisions, and Finn’s evolving personality.</li>
+    <li>Reflects user interactions, decisions, and Reefy’s evolving personality.</li>
   </ul>
 </div>
 
@@ -1798,19 +1799,19 @@
   <h3>📖 3. Chapter-by-Chapter Mechanics</h3>
   <h4>🔹 3.1 Chapter States</h4>
   <ul>
-    <li><strong>Chapter Data Memory:</strong> Each chapter stores user interactions (e.g., conversations with Finn).</li>
+    <li><strong>Chapter Data Memory:</strong> Each chapter stores user interactions (e.g., conversations with Reefy).</li>
     <li><strong>Cross-Chapter Dependency:</strong> New chapters reference themes and data points from previous chapters to enhance continuity.</li>
   </ul>
   <h4>🔹 3.2 Dynamic AI Chat Flow</h4>
   <p><strong>A. User Interaction in Each Chapter</strong></p>
   <ul>
-    <li>Prompt-Response Cycle: Users chat with Finn, asking questions or responding to his remarks.</li>
+    <li>Prompt-Response Cycle: Users chat with Reefy, asking questions or responding to his remarks.</li>
     <li>Learning Input: Key user inputs (themes, keywords, decisions) are stored and processed.</li>
   </ul>
   <p>Example:</p>
   <ul>
     <li>Chapter 2: User asks, "What’s the biggest coral reef you’ve seen?"</li>
-    <li>Chapter 3 Finn Response (adapted): "You’ve asked about coral reefs before… Let me tell you about one that’s really special."</li>
+    <li>Chapter 3 Reefy Response (adapted): "You’ve asked about coral reefs before… Let me tell you about one that’s really special."</li>
   </ul>
   <p><strong>B. Adaptive Behavior</strong></p>
   <ul>
@@ -1822,7 +1823,7 @@
   <ul>
     <li><strong>User Inputs Stored:</strong> All meaningful interactions (questions, themes, key phrases) are saved to a database.</li>
     <li><strong>Themes Extracted:</strong> NLP processes conversations to extract dominant themes.</li>
-    <li><strong>Chapter Insights:</strong> These insights feed into the next chapter’s AI, influencing Finn’s behavior and the storyline.</li>
+    <li><strong>Chapter Insights:</strong> These insights feed into the next chapter’s AI, influencing Reefy’s behavior and the storyline.</li>
   </ul>
 </div>
 
@@ -1839,24 +1840,24 @@
       </ul>
     </li>
   </ul>
-  <h4>🔹 4.2 Finn’s Personality Evolution</h4>
+  <h4>🔹 4.2 Reefy’s Personality Evolution</h4>
   <ul>
     <li><strong>Memory Retention:</strong> References key user inputs from past chapters ("You told me once you were curious about dolphins...").</li>
     <li><strong>Tone Shifts:</strong> Adjusts tone based on user interactions (e.g., friendly, curious, or adventurous).</li>
-    <li><strong>Behavioral Adaptation:</strong> Recurring themes (e.g., exploration, marine life) shape Finn’s narrative focus.</li>
+    <li><strong>Behavioral Adaptation:</strong> Recurring themes (e.g., exploration, marine life) shape Reefy’s narrative focus.</li>
   </ul>
 </div>
 
 <div class="section">
   <h3>📝 5. Epilogue Generator</h3>
   <h4>🔹 5.1 Concept</h4>
-  <p>Upon completion of all chapters, Finn generates a personalized epilogue:</p>
+  <p>Upon completion of all chapters, Reefy generates a personalized epilogue:</p>
   <ul>
     <li>A unique short story combining:
       <ul>
         <li>Collective themes extracted from user interactions.</li>
         <li>Key inputs (e.g., favorite questions, emotions expressed).</li>
-        <li>Finn’s evolved "personality" shaped by the chats.</li>
+        <li>Reefy’s evolved "personality" shaped by the chats.</li>
       </ul>
     </li>
   </ul>
@@ -1874,7 +1875,7 @@
   <p><strong>AI-Generated Epilogue Example:</strong></p>
   <ul>
     <li>If users focused on themes of "exploration" and "friendship," the epilogue might read:
-      <blockquote>"Finn swam into the horizon, carrying the stories of new friends and distant reefs. Somewhere deep below, a turtle smiled, remembering the shark who asked so many questions."</blockquote>
+      <blockquote>"Reefy swam into the horizon, carrying the stories of new friends and distant reefs. Somewhere deep below, a turtle smiled, remembering the shark who asked so many questions."</blockquote>
     </li>
   </ul>
 </div>
@@ -1883,13 +1884,13 @@
   <p><strong>Frontend (User Interaction):</strong></p>
   <ul>
     <li>Web interface with chapter-based progression.</li>
-    <li>AI chat module for engaging Finn.</li>
+    <li>AI chat module for engaging Reefy.</li>
   </ul>
   <p><strong>Backend (Data Processing):</strong></p>
   <ul>
     <li>Chat data collection and storage.</li>
     <li>NLP engine for theme and pattern extraction.</li>
-    <li>Context management (for adaptive Finn behavior).</li>
+    <li>Context management (for adaptive Reefy behavior).</li>
   </ul>
   <p><strong>AI Modules:</strong></p>
   <ul>
@@ -1903,7 +1904,7 @@
   <h3>✨ 7. Features</h3>
   <h4>🔹 7.1 Personalized AI Chat Experience</h4>
   <ul>
-    <li>Users feel like Finn "remembers" their interactions, creating a conversational bond.</li>
+    <li>Users feel like Reefy "remembers" their interactions, creating a conversational bond.</li>
   </ul>
   <h4>🔹 7.2 Cross-Chapter Progression</h4>
   <ul>
@@ -1911,7 +1912,7 @@
   </ul>
   <h4>🔹 7.3 Unique Epilogues</h4>
   <ul>
-    <li>The story concludes uniquely for each user or group, reflecting their influence on Finn.</li>
+    <li>The story concludes uniquely for each user or group, reflecting their influence on Reefy.</li>
   </ul>
 </div>
 
@@ -1928,14 +1929,14 @@
   <ul>
     <li><strong>Branching Storylines:</strong> Introduce parallel chapters based on dominant user themes.</li>
     <li><strong>Collective Epilogue Replay:</strong> Allow users to revisit the "final story" shaped by their interactions.</li>
-    <li><strong>Finn’s Ocean Journal:</strong> Save key questions and responses to create a digital archive of Finn’s adventures.</li>
+    <li><strong>Reefy’s Ocean Journal:</strong> Save key questions and responses to create a digital archive of Reefy’s adventures.</li>
   </ul>
 </div>
 
 <div class="section">
   <h3>🌈 10. Conclusion</h3>
-  <p>Finn’s Ocean Odyssey is an innovative fusion of interactive storytelling, evolving AI, and collective creativity. By combining user inputs across chapters, Finn becomes more than just a character—he becomes a living, evolving story. The final epilogue is written not just by Finn, but by everyone who joined his journey through the oceans.</p>
-  <p>And somewhere, Finn will always be swimming… waiting for the next adventure.</p>
+  <p>Reefy’s Ocean Odyssey is an innovative fusion of interactive storytelling, evolving AI, and collective creativity. By combining user inputs across chapters, Reefy becomes more than just a character—he becomes a living, evolving story. The final epilogue is written not just by Reefy, but by everyone who joined his journey through the oceans.</p>
+  <p>And somewhere, Reefy will always be swimming… waiting for the next adventure.</p>
 </div>
             `;
         }

@@ -1,11 +1,11 @@
-# Ocean Adventure with Finn
+# Ocean Adventure with Reefy
 
-An interactive ocean exploration experience with Finn the friendly shark! Learn about marine life, ocean ecosystems, and conservation through an engaging chat interface powered by AI.
+An interactive ocean exploration experience with Reefy the friendly shark! Learn about marine life, ocean ecosystems, and conservation through an engaging chat interface powered by AI.
 
 ## Features
 
 - Interactive chapters about different ocean environments
-- AI-powered chat with Finn, your ocean guide
+- AI-powered chat with Reefy, your ocean guide
 - Beautiful ocean-themed UI with animations
 - Educational content about marine life
 
