@@ -1432,7 +1432,7 @@
         <div class="chapters">
             <div class="chapters-content">
                 <button class="chapter-button active" id="chapter1"><span class="chapter-text">Chapter 1: The Coral Kingdom</span></button>
-                <button class="chapter-button locked" id="chapter2"><span class="chapter-text">Chapter 2: The Great Pacific Quest</span></button>
+                <button class="chapter-button" id="chapter2"><span class="chapter-text">Chapter 2: The Great Pacific Quest</span></button>
                 <button class="chapter-button locked" id="chapter3"><span class="chapter-text">Chapter 3: Legends of the Deep Blue</span></button>
                 <button class="chapter-button locked" id="chapter4"><span class="chapter-text">Chapter 4: Reefy Among the Icebergs</span></button>
                 <button class="chapter-button locked" id="chapter5"><span class="chapter-text">Chapter 5: The Frozen North</span></button>
@@ -1565,9 +1565,12 @@
             });
         }
 
+        let currentChapter = 1;  // Add chapter tracking
+
         function loadChapter(chapterNumber, button) {
             clearActiveButtons();
             button.classList.add('active');
+            currentChapter = chapterNumber;  // Update current chapter
             
             const content = document.querySelector('.content');
             const contentInner = document.querySelector('.content-inner');
@@ -1589,9 +1592,9 @@
                     <p>Reefy explores the vibrant reefs of the Indian Ocean, swimming among colorful corals and playful reef fish, discovering the magic of his home waters.</p>
                 `;
             } else if (chapterNumber === 2) {
-                content.classList.add('locked');
                 contentInner.innerHTML = `
                     <img src="images/chapter2.jpg" alt="Deep ocean abyss with bioluminescent creatures" class="chapter-image">
+                    <button class="talk-to-finn-button" onclick="toggleChat()">Talk to Reefy</button>
                     <h2>Chapter 2: The Great Pacific Quest</h2>
                     <p>Reefy ventures into the Pacific Ocean, encountering majestic sea turtles, mysterious volcanic ridges, and the boundless beauty of the world's largest ocean.</p>
                 `;
@@ -1650,11 +1653,16 @@
             if (chatButton) {
                 chatButton.classList.add('active');
             }
+
+            // Customize welcome message based on chapter
+            const welcomeMessage = currentChapter === 1 
+                ? "Hi! I'm Reefy, your ocean guide! How can I help you today? 🌊"
+                : "Welcome to the Pacific Ocean! I'm excited to share my adventures in these vast waters with you! What would you like to know about the Pacific? 🌊";
             
             content.innerHTML = `
                 <div class="chat-container">
                     <div class="chat-messages" id="chatMessages">
-                        <div class="message assistant-message">Hi! I'm Reefy, your ocean guide! How can I help you today? 🌊</div>
+                        <div class="message assistant-message">${welcomeMessage}</div>
                     </div>
                     <div class="chat-input-container">
                         <input type="text" id="user-input" class="chat-input" placeholder="Type your message..." onkeypress="if(event.key === 'Enter') sendMessage()">
@@ -1662,11 +1670,6 @@
                     </div>
                 </div>
             `;
-
-            // Focus the input after chat is opened
-            setTimeout(() => {
-                document.getElementById('user-input').focus();
-            }, 800);
         }
 
         let messages = [];
@@ -1694,7 +1697,8 @@
                     },
                     body: JSON.stringify({ 
                         message,
-                        conversationHistory: messages 
+                        conversationHistory: messages,
+                        currentChapter: currentChapter  // Send chapter information to backend
                     })
                 });
                 
