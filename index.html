@@ -1432,12 +1432,12 @@
         <div class="chapters">
             <div class="chapters-content">
                 <button class="chapter-button active" id="chapter1"><span class="chapter-text">Chapter 1: The Coral Kingdom</span></button>
-                <button class="chapter-button" id="chapter2"><span class="chapter-text">Chapter 2: The Great Pacific Quest</span></button>
+                <button class="chapter-button locked" id="chapter2"><span class="chapter-text">Chapter 2: The Great Pacific Quest</span></button>
                 <button class="chapter-button locked" id="chapter3"><span class="chapter-text">Chapter 3: Legends of the Deep Blue</span></button>
                 <button class="chapter-button locked" id="chapter4"><span class="chapter-text">Chapter 4: Reefy Among the Icebergs</span></button>
                 <button class="chapter-button locked" id="chapter5"><span class="chapter-text">Chapter 5: The Frozen North</span></button>
                 <div class="bottom-nav">
-                    <a href="https://pump.fun/coin/85iDuRyDFoskLALbUVwEVVaj77gxLvnHMmFJqE1opump" target="_blank"><button class="nav-button pump-fun"><img src="images/Pump_fun_logo.png" alt="Pump.fun"></button></a>
+                    <a href="#" target="_blank"><button class="nav-button pump-fun"><img src="images/Pump_fun_logo.png" alt="Pump.fun"></button></a>
                     <button class="nav-button docs" onclick="toggleDocs()"><img src="images/docs.png" alt="Guide"></button>
                     <button class="nav-button twitter" onclick="window.open('https://x.com/ReefyTheShark', '_blank')"><img src="images/xlogo.png" alt="X Logo"></button>
                 </div>
@@ -1446,13 +1446,6 @@
 
         <div class="content">
             <div class="content-inner">
-                <div class="chat-container">
-                    <div id="chat-messages" class="chat-messages"></div>
-                    <div class="chat-input-container">
-                        <input type="text" id="message-input" placeholder="Chat with Reefy..." class="chat-input">
-                        <button onclick="sendMessage()" class="send-button">Send</button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -1592,9 +1585,9 @@
                     <p>Reefy explores the vibrant reefs of the Indian Ocean, swimming among colorful corals and playful reef fish, discovering the magic of his home waters.</p>
                 `;
             } else if (chapterNumber === 2) {
+                content.classList.add('locked');
                 contentInner.innerHTML = `
                     <img src="images/chapter2.jpg" alt="Deep ocean abyss with bioluminescent creatures" class="chapter-image">
-                    <button class="talk-to-finn-button" onclick="toggleChat()">Talk to Reefy</button>
                     <h2>Chapter 2: The Great Pacific Quest</h2>
                     <p>Reefy ventures into the Pacific Ocean, encountering majestic sea turtles, mysterious volcanic ridges, and the boundless beauty of the world's largest ocean.</p>
                 `;
